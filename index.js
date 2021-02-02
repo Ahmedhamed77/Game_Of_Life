@@ -9,13 +9,13 @@ function setup() { //setup p5 to create canvas
         let animal = new Animal();
         animals.push(animal);
     }
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 100; i++) {
         let food = new Food();
         yda.push(food);
         food.pickLocation();
     }
 
-    frameRate(20); // 20 FPS=
+    frameRate(15); // 20 FPS=
 }
 
 
@@ -30,7 +30,7 @@ function draw() { //draw function from p5 to draw no canvas
         a.show();
         let r = floor(random(8));
 
-        if(a.starvation > 98){
+        if(a.starvation > 50){
             a.moveRandomly(r);
         }
         else {
